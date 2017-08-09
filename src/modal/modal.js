@@ -460,7 +460,7 @@ angular.module('ui.bootstrap.modal', ['ui.bootstrap.multiMap', 'ui.bootstrap.sta
           Array.prototype.forEach.call(
             Object.keys(modal.scope.$resolve),
             function(property) {
-              content.attr(property, '$resolve.' + property);
+              content.attr(snake_case(property), '$resolve.' + property);
             }
           );
         } else {
